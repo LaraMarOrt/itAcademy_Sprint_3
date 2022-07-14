@@ -4,7 +4,7 @@
   "description": "A company in the e-commerce sector has asked us for a web application that allows them to offer the purchase of their products through the internet.",
   "main": "index.js",
   "scripts": {
-    "build": "purgecss --css sass/custom.css --content index.html -o css/reducido.css"
+    "build": "purgecss --css sass/custom.css --content index.html checkout.html -o css/styles.css"
   },
   "repository": {
     "type": "git",
