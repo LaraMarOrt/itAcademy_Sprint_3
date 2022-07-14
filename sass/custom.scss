@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+$secondary: #000;
+$primary: #ebca00;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// menu del mobile
+.offcanvas {
+  background-color: #000;
+}
+.btn-close {
+  background: transparent
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234a5bcb'%3e%3cpath fill='white' d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat;
+  opacity: 1;
+}
+@media (max-width: 991px) {
+.mb-s {
+ margin-top: 2rem;
+ margin-bottom: 2rem;
+ border-bottom: 2px solid #ebca00;
+}
+}
+
+// Ponemos la imagen de fondo del titulo principal en el header
+.bg-img {
+  background-image: url(../images/imagen-cabecera-zapatilla.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+}
+
+// Controlamos el tamaño del header e imagen según el dispositivo
+.pd-img {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+@media (min-width: 576px) {
+
+  .pd-img {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .pd-img {
+    padding-top: 14rem !important;
+    padding-bottom: 14rem !important;
+  }
+}
+
+// Cambiamos el color de los navlinks
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--bs-white);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: var(--bs-primary);
+}
+
+
+// Quitamos los bordes a las cards
+.card {
+  border: none;
+}
+
+// Recolocamos el botón
+.mg-btn {
+  margin-top: -50px;
+}
+
+// Formas fondo bloque 1
+.form-left {
+  content: "";
+  position: absolute;
+  background-color: var(--bs-primary);
+  width: 90%;
+  height: 50%;
+  max-height: 70px;
+  min-height: 50px;
+  left: 0;
+  z-index: -1;
+  border-radius: 0 15rem 15rem 0;
+  margin-top: 4rem;
+}
+
+.form-right {
+  content: "";
+  position: absolute;
+  background-color: var(--bs-secondary);
+  width: 40%;
+  height: 50%;
+  max-height: 70px;
+  min-height: 50px;
+  right: 0;
+  z-index: -1;
+  border-radius: 15rem 0 0 15rem;
+  margin-top: 12rem;
+}
+
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  line-height: 1.125;
+  font-weight: 400;
+  letter-spacing: .004em;
+  font-size: 40px;
+}
+
+
+// Cambiamos el color de los botones de compra
+.btn-outline-dark {
+  color: #fff;
+  border-color: var(--bs-secondary);
+  background-color: var(--bs-secondary);
+}
+
+.btn-outline-dark:hover {
+  color: var(--bs-secondary);
+  background-color: var(--bs-primary);
+  border-color: var(--bs-secondary);
+}
+
+// Ponemos una transición al logo
+.logo {
+  text-align: center;
+  animation: zumbido 4s ease-out;
+  animation-iteration-count: 10;
+}
+
+@keyframes zumbido {
+
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+
+  15% {
+    transform: rotateZ(-15deg);
+  }
+
+  20% {
+    transform: rotateZ(10deg);
+  }
+
+  25% {
+    transform: rotateZ(-10deg);
+  }
+
+  30% {
+    transform: rotateZ(6deg);
+  }
+
+  35% {
+    transform: rotateZ(-4deg);
+  }
+
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+
+// -------------------------------------------------------------------------------------------
+// Parte especifica checkout
+// -------------------------------------------------------------------------------------------
+
+// Card del checkout
+.card-checkout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: transparent;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+}
+.brd-l-30{
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.brd-r-30{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+// parte que no aparece en el mobile de las características de envio
+@media screen and (max-width: 768px) {
+  .no-mobile {
+  display: none;
+  }
+  }
